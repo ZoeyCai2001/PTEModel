@@ -1,12 +1,12 @@
 # MCM
 Power-Time-Energy Model in Cycling. Developed a user-friendly time and physical effort allocation strategy for riders in cycling competitions.
-## 1.1 Problem Background
+## 1 Problem Background
 
 Cyclists are divided into different categories, such as sprinters, pursuers, time trialists, and so on. Different types of riders may have different power curves. The power curve depicts how long an athlete can sustain a given power output, which can help cyclists plan their energy more wisely during the competition.
 
 There are many types of cycling competitions, but the common denominator is that all cyclists complete the same distance in less time than anyone else. Therefore, cyclists are always looking for how to complete a given distance in less time, and how to develop training plans and competition strategies through the power curve becomes increasingly important.
 
-## 1.2 Restatement of the Problem
+## 2 Restatement of the Problem
 
 Build a mathematical model that describes the relationship between a cyclist’s position and the energy released, which can be applied to different types of riders. The model must take into account the constraints on the total energy released by the cyclist, and the limits of both past overloading and the power curve.
 
@@ -16,7 +16,7 @@ Build a mathematical model that describes the relationship between a cyclist’s
 - The fourth problem focuses on cyclists’ imperfect execution of power distribution. It asks to provide a detailed plan for riders.
 - The fifth problem discusses the extension of the model. The aim is to produce the best distribution of energy for teams of six in a team time trial.
 
-## 1.3 Our Work
+## 3 Our Work
 
 In a gesture to plot the power profile, propose the optimal riding strategy, and test the sensitivity of the model, several works are done to build it and then solve the problem.
 
