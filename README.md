@@ -21,13 +21,15 @@ Build a mathematical model that describes the relationship between a cyclist’s
 In a gesture to plot the power profile, propose the optimal riding strategy, and test the sensitivity of the model, several works are done to build it and then solve the problem.
 
 - Accessing the data: As it’s hard to get real-time speed data of a certain athlete in a formal competition, we changed our course to excavate data from standard pace, past papers, and other resources. The data sources are summarized in table [1].
-- | Dataset                | Website                                          | Source                                       |
-|------------------------|--------------------------------------------------|----------------------------------------------|
-| Cycling power charts   | [https://www.trainingpeaks.com/blog/power-profiling/](https://www.trainingpeaks.com/blog/power-profiling/)   | -                                         |
-| UCI results            | [https://www.flanders2021.com/en/races](https://www.flanders2021.com/en/races)   | -                                         |
+
+
+| Dataset                | Website Source                                       |
+|------------------------|-------------------------------------------------------------------------------|
+| Cycling power charts   | [https://www.trainingpeaks.com/blog/power-profiling/](https://www.trainingpeaks.com/blog/power-profiling/)                                       |
+| UCI results            | [https://www.flanders2021.com/en/races](https://www.flanders2021.com/en/races)                                       |
 | Olympics results       | [https://www.procyclingstats.com/race/olympic-games-itt/2021/result](https://www.procyclingstats.com/race/olympic-games-itt/2021/result) | -                                         |
-| Maps                   | [https://www.openstreetmap.org/about/](https://www.openstreetmap.org/about/)     | -                                         |
-| Cycling details        | [https://www.strava.com/activities](https://www.strava.com/activities)         | -                                         |
+| Maps                   | [https://www.openstreetmap.org/about/](https://www.openstreetmap.org/about/)                                           |
+| Cycling details        | [https://www.strava.com/activities](https://www.strava.com/activities)                                         |
 
 - Presenting our model: In order to investigate the problem deeper, we divide our model into three sub-models. The first one is the establishment of Power Curve Fitting to describe athletes’ ability in different exercise intensity. The second one is about power distribution during competition process, Power-Time-Energy Equation, which establishes the relationship between output energy and demand energy. The third one is to solve the optimal strategy for a certain player and certain competition.
 - Sensitivity analysis and extension: Taking weather condition and rider deviations into account, we apply the extended model with UCI data to evaluate the reliability of our model through sensitivity analysis. Also, we extend our model to team time trial.
