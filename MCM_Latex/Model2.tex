@@ -1,0 +1,38 @@
+\subsection{Model Establishment}
+\par According to our assumptions, the cyclist's entire race is described as several segments of uniform motion: $\{(P_i,T_i)\},i=1,2,\cdots,N$, controlled by Power-Time-Energy Equation (PTE Equation):
+\begin{equation}\label{PTE}
+	\sum_{i=1}^N P_iT_i=\sum_{j=1}^M E_jL_j
+\end{equation}
+\par where $P_i$ denotes the average power per kilogram of the $i^{th}$ period, $T_i$ denotes the interval length of the $i^{th}$ time period, $E_j$ denotes the energy consumed per kilometer during the $j^{th}$ distance period, $L_j$ denotes the length of the $j^{th}$ distance period.
+\par Due to the limitations of the overall force of the athlete, $P_i$ needs to be subject to some constraints, which we describe as follows:
+\begin{equation}\label{cons1}
+\frac{1}{10} f^{-1}(P_i)\leq T_i \leq f^{-1}(P_i)
+	\end{equation}
+\begin{equation}\label{cons2}
+	\begin{split}
+		P_i > FTP \Leftrightarrow \left\{
+	\begin{array}{rcl}
+		P_{i-1}\leq FTP\\
+		\quad \\
+		T_{i} \leq \frac{W_i}{P_i-FTP}\\
+		\quad\\
+		W_i=\frac{C\ln T_{i-1}}{P_{i-1}+D}
+	\end{array} \right.
+\end{split}
+\end{equation}
+
+\par where $f$ is the power curve fitted from power profile, and it is a strictly monotonically decreasing function where $f^{-1}(P_i)$ denotes the maximum length of time a cyclist can maintain $P_i$-power.
+
+\par Constraint \ref{cons1} points out that the length of each time period shall not be too small or too large, and the maxium is limited by the power curve. Constraint \ref{cons2} is the mechanism of recovery, which indicates that only if a cyclist stays below the FTP power for some time and restores the extra energy $W_i$ can he rides at a power above FTP in the next time period.
+
+\par Equation \ref{PTE} together with Contraint \ref{cons1} \ref{cons2} makes up the model which describes the competition process.
+
+\subsection{Application of Model}
+\subsubsection{2021 Olympic Time Trial course in Tokyo}
+
+\subsubsection{2021 UCI World Championship time trial course in Flanders}
+
+\subsubsection{Self-designed course}
+
+
+\subsection{}

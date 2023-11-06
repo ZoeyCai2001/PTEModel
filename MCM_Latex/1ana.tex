@@ -1,0 +1,22 @@
+As stated before, parameter a and b represent the style of an athlete and c reflects his level. As we can see from table [\ref{para:abc}], for men and women of the same style, parameter c of men is larger than that of women, which shows that the average physical strength of men is higher than that of women. With respect to different rider types, it's obvious that ability in extreme intensity domain of sprinters is larger than that of trialists, which means that sprinter's extreme exercise ability exceeds that of trialists.
+Then we consider the goodness of fit in table [\ref{tab:sse}]:
+\begin{table}[h]
+%	\renewcommand\arraystretch{1.3}
+	\setlength{\belowcaptionskip}{0.2cm}
+	\setlength\tabcolsep{16pt}%调列距
+	\centering
+	\caption{Parameter estimation error}
+\begin{tabular}{cccc}
+\toprule[2pt]
+& {\bf Sum of Squares Error(SSE) }  & {\bf Adjusted }$\bm{R^2}$ & {\bf RMSE} \\
+\midrule
+	MTT   & 0.3001  & 0.9879  & 0.5478  \\
+	MSP   & 0.7471  & 0.9870  & 0.8644  \\
+	FTT   & 0.2712  & 0.9881  & 0.5208  \\
+	FSP   & 0.5641  & 0.9840  & 0.7511  \\
+		\bottomrule[2pt]
+\end{tabular}%
+
+	\label{tab:sse}%
+\end{table}%
+\par Table above shows the partial result of variance analysis where values of adjusted $R^2$ are all above 0.98 and SSE values are nearly zero, indicating an excellent fitting effect in our model for 4 riders.

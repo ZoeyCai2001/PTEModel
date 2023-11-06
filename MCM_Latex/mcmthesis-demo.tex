@@ -1,0 +1,75 @@
+\documentclass{mcmthesis}
+\mcmsetup{CTeX = true,    % 使用 CTeX 套装时，设置为 true
+          tcn = \textcolor{black}{2202009}, problem = {A},
+          sheet = true, titleinsheet = true, keywordsinsheet = true,
+          titlepage = false, abstract = false}
+\usepackage{array}       
+\usepackage{newtxtext}     % \usepackage{palatino}
+\usepackage[backend=bibtex]{biblatex}   % for RStudio Complie
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}
+
+\title{Power-Time-Energy Model in Cycling}
+% \author{\small \href{http://www.latexstudio.net/}
+%   {\includegraphics[width=7cm]{mcmthesis-logo}}}
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+\input{summary}
+\begin{keywords}
+Time Trial, Power Distribution, Nonlinear Optimization,  MATLAB
+\end{keywords}
+
+\end{abstract}
+
+\maketitle
+
+%% Generate the Table of Contents, if it's needed.
+\tableofcontents   % 若不想要目录, 注释掉该句
+
+\newpage
+
+
+\section{Introduction}
+
+\subsection{Problem background}
+\input{ProblemBack}
+
+\subsection{Restatement of the Problem}
+\input{Restate}
+
+\subsection{Our work}
+\input{ourwork}
+\section{Assumptions and Justification}
+\input{assump}
+\section{Notations and Glossary}
+\input{notation}
+\par We also give out the explanation of some proper nouns:
+\input{glossary}
+
+\section{Solution of the First Problem}
+\input{1overview}
+\subsection{Model Establishment}
+\input{1estab}
+\subsection{Solution of Model}
+\input{sol1}
+\subsection{Analysis of Results}
+\input{1ana}
+\section{Solution of the Second Problem}
+\input{Model2ES}
+\input{Model2AP}
+\section{Sensitivity Analysis of Weather Conditions}
+\input{WeaSen1}
+\section{Sensitivity Analysis of Power Output}
+\input{posens}
+\section{Model Extension and Evaluation}
+\input{EvaExt}
+\input{strength}
+\input{reference}
+\newpage
+\input{appendix}
+\end{document}

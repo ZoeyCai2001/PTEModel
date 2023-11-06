@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Parameter estimation results}
+    \begin{tabular}{cccc}
+    \toprule
+          & a     & b     & c \\
+    \midrule
+    Men's time trial & 23.31 & -0.8936 & 3.42 \\
+    Men's sprinter & 36.62 & -0.9821 & 1.558 \\
+    Female's time trial & 21.57 & -0.7383 & 2.261 \\
+    Female's sprinter & 26.82 & -0.7438 & 0.2798 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\par We use MATLAB to perform fitting to obtain four Power-Time-Energy equations.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Parameter estimation error}
+	\begin{tabular}{cccc}
+		\toprule
+		& Sum of Squares Error(SSE)   & Adjusted $R^2$ & RMSE \\
+		\midrule
+		Men's time trial & 0.300078071 & 0.987881738 & 0.547793822 \\
+		Men's sprinter & 0.747110183 & 0.987015712 & 0.864355357 \\
+		Female's time trial & 0.27123635 & 0.988080191 & 0.520803562 \\
+		Female's sprinter & 0.564119013 & 0.983963489 & 0.751078566 \\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:addlabel}%
+\end{table}%
+\par Table above shows the partial result of variance analysis where values of adjusted $R^2$ are all above 0.98 and SSE values are nearly zero, indicating an excellent fitting effect in our model for 4 races.

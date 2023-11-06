@@ -1,0 +1,9 @@
+\begin{itemize}
+\item {\bf Functional threshold power (FTP) } Maximum mean power that a cyclist can sustainably produce for the period of one hour which can be expressed in terms of watts per kilo.
+\item {\bf Power Profile Chart} It shows how does rider's maximum power output compare to the riders of various fitness and experience level, ranging from novice to the world-class, pro road cyclists.The chart includes 4 values divided by weight reflecting one's cycling talent: sprint abilities (5s), anaerobic capacity described by 1 minute maximum power, 5 minutes to tell about maximum oxygen uptake capability and 20 min to describe FTP. 
+\item{\bf Power Curve}Optimal average power output from 1 second to maximum riding time measured in watts (W) or watts per kilogram (W/kg).
+\item {\bf Critical Power(CP)}The asymptote of the power duration curve where power is the maximum sustainable power output for a given time, ranging from 2-15 minutes.
+\item {\bf W}Work capacity one can expend above the CP before reaching complete exhaustion.
+\item{\bf Time Trialist(TT)}A road bicycle racer who can maintain high speeds for long periods of time, to maximize performance during individual or team time trials. 
+\item{\bf Sprinter}A road bicycle racer or track racer who can finish a race very explosively by accelerating quickly to a high speed, often using the slipstream of another cyclist or group of cyclists tactically to conserve energy.
+\end{itemize}

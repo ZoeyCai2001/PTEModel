@@ -1,0 +1,24 @@
+With the help of power profile chart, we can easily obtain the ability level of an amateur, whose level is above-average. Then we use MATLAB to fit functions. 
+\par As mentioned before, we use Eq (\ref{func}) to describe the relationship between power output per weight and the duration one cyclist can maintain at that level. Using data from power profile chart, we determine the value of three equations: style parameters a and b and level parameter c, as is shown in table [\ref{para:abc}].
+
+
+\begin{table}[htbp]
+	\setlength{\belowcaptionskip}{0.2cm}
+	%\renewcommand\arraystretch{1.3}
+	\setlength\tabcolsep{13pt}%调列距
+	\centering
+	\caption{Parameter estimation results}
+	\begin{tabular}{cccc}
+		\toprule[2pt]
+		& {\bf a}     & {\bf b}     & {\bf c} \\
+		\midrule
+		Male's time trialist & 23.31 & -0.89 & 3.42 \\
+		Male's sprinter & 36.62 & -0.98 & 1.56 \\
+		Female's time trialist & 21.57 & -0.73 & 2.26 \\
+		Female's sprinter & 26.82 & -0.74 & 0.27 \\
+		\bottomrule[2pt]
+	\end{tabular}%
+	\label{para:abc}%
+\end{table}%
+%\par We use MATLAB to perform fitting to obtain four Power-Time-Energy equations.
+\par With help of the results, we can easily obtain power curves of different athletes with putting parameters into Eq (\ref{func}).

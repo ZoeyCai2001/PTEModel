@@ -1,0 +1,66 @@
+\subsection{Model Establishment}
+\par According to our assumptions, the cyclist's entire race is described as several segments of uniform motion: $\{(P_i,T_i)\},i=1,2,\cdots,N$, controlled by Power-Time-Energy Equation (PTE Equation):
+\begin{equation}\label{PTE}
+	\sum_{i=1}^N P_iT_i=\int_{\sigma }^{}E(s)ds 
+\end{equation}
+where $P_i$ denotes the average power per kilogram of the $i^{th}$ period, $T_i$ denotes the interval length of the $i^{th}$ time period, $E(s)$ denotes the energy consumed per kilogram per kilometer at the position of s, $\sigma$ represents the track curve.
+\par Due to the limitations of the overall force of the athlete, $P_i$ needs to be subject to some constraints, which we describe as follows:
+\begin{equation}\label{cons1}
+\frac{1}{10} f^{-1}(P_i)\leq T_i \leq f^{-1}(P_i)
+	\end{equation}
+\begin{equation}\label{cons2}
+	\begin{split}
+		P_i > FTP \Leftrightarrow \left\{
+	\begin{array}{rcl}
+		P_{i-1}\leq FTP\\
+		\quad \\
+		T_{i} \leq \frac{W_i}{P_i-FTP}\\
+		\quad\\
+		W_i=\frac{C\ln T_{i-1}}{P_{i-1}+D}
+	\end{array} \right.
+\end{split}
+\end{equation}
+where $f$ is the power curve fitted from power profile, and it is a strictly monotonically decreasing function where $f^{-1}(P_i)$ denotes the maximum length of time a cyclist can maintain $P_i$-power.
+\begin{wrapfigure}{l}{7cm} % 靠文字内容的左侧
+	\includegraphics[width=0.6\linewidth]{image/w}
+	\label{pyramid}
+\end{wrapfigure}
+\par Constraint (\ref{cons1}) points out that the length of each time period shall not be too small or too large, and the maximum is limited by the power curve. Constraint (\ref{cons2}) is the mechanism of recovery, which indicates that only if a cyclist stays below the FTP power for some time and restores the extra energy $W_i$ can he rides at a power above FTP in the next time period.
+
+\par It must be pointed out that $E(s)$ may be affected by many factors, such as weather and road condition. We conclude the following mathematical model:
+
+\begin{equation}
+	\label{E}
+	E(s) = \overline{E}(1-k_1v^2\cos\theta(s))(1+k_2\sin\phi(s))
+\end{equation}
+where $\overline{E}$ denotes the the energy consumed per kilometer under the windless condition of flat ground, $v$ is the speed of wind, $\theta(s)$ denotes the angle between the rider's direction and the wind at position of s, and $\phi(s)$ is the slope gradient, $k_1$ and $k_2$ are constants.
+
+\par Eq (\ref{PTE}) together with Constraint (\ref{cons1})( \ref{cons2}) makes up the model which describes the competition process.
+
+\par When having both rider information (Power Profile \& Power Curve) and track information (each $E(s)$), it is possible to construct Optimizer to produce the best strategy for a rider. We assume that a cyclist's entire race schedule is divided into three parts: the FTP stage ($P_1,T_1$), the recovery stage ($P_2,T_2$), and the sprint stage ($P_3,T_3$), with power equal to, less than, and greater than FTP.
+\par The objective function of optimization is $T_1+T_2+T_3$. Eq (\ref{PTE}) and Constraint (\ref{cons1}) (\ref{cons2}) make up the constraints. The model of Optimizer is described as follows:
+
+\begin{equation}
+	\min T_1+T_2+T_3 \quad\quad \rm{s.t.}
+	\label{min}
+\end{equation}
+
+\begin{equation}\label{cons3}
+\begin{split}
+		\left\{
+		\begin{aligned}
+		%	\begin{array}{rcl}
+				&\sum_{i=1}^{3}P_iT_i= \int_{\sigma }^{}E(s)ds \\
+				\quad \\
+			&\frac{1}{10} f^{-1}(P_i)\leq T_i \leq f^{-1}(P_i)\\
+				\quad\\
+				&P_1=FTP,P_2<FTP,P_3>FTP\\
+				\quad \\
+				&T_3 \le ({\frac{\ln T_2}{p_2+D}+C})/{(P_3-FTP)}\\
+				\end{aligned}
+		%	\end{array} 
+	\right.
+\end{split}
+\end{equation}
+\par By consulting the literature and parameter estimation, we determined that $C=700,D=0.33,\overline{E}=0.44$.
+\par To solve the optimization problem, we use the fmincon function in MATLAB, which aims to find the minimum of a constrained nonlinear multivariate function. This function include four methods: interior-point, sqp, active-set, trust-region-reflective.
